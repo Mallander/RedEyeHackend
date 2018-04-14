@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_spritesheet.png-26ea83d57148f85185996e69ae74bbfc.stex"
+path="res://.import/chainsaw-image.png-6b6296e21b5eef463a03d9f48dfa14b4.stex"
 
 [deps]
 
-source_file="res://assets/tiles_spritesheet.png"
-source_md5="b45aa7bd86240182cf2271f98cd2937e"
+source_file="res://assets/chainsaw-image.png"
+source_md5="cf9c94382f705dd874499e709622b0cb"
 
-dest_files=[ "res://.import/tiles_spritesheet.png-26ea83d57148f85185996e69ae74bbfc.stex" ]
-dest_md5="27b1cd1f12ac486212a63f4c43d32f4a"
+dest_files=[ "res://.import/chainsaw-image.png-6b6296e21b5eef463a03d9f48dfa14b4.stex" ]
+dest_md5="1946f52f0304b273e26d475d651685bb"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -2,16 +2,16 @@ extends KinematicBody2D
 
 signal hit
 
-const GRAVITY = 900.0
+const GRAVITY = 2500.0
 
 const FLOOR_ANGLE_TOLERANCE = 40
-const WALK_FORCE = 900
+const WALK_FORCE = 2000
 const WALK_MIN_SPEED = 10
-const WALK_MAX_SPEED = 300
-const STOP_FORCE = 1300
-const JUMP_SPEED_MIN = 250
-const JUMP_SPEED_MAX = 650
-const JUMP_SPEED_INCREASE = 30
+const WALK_MAX_SPEED = 500
+const STOP_FORCE = 2000
+const JUMP_SPEED_MIN = 650
+const JUMP_SPEED_MAX = 1050
+const JUMP_SPEED_INCREASE = 40
 const JUMP_SPEED = 650
 const JUMP_MAX_AIRBORNE_TIME = 0.2
 
@@ -31,11 +31,20 @@ var queued = false;
 var animToPlay = "";
 
 onready var animationPlayer = get_node("Sprite/AnimationPlayer");
+onready var boundary = get_node("/root/Node2D/Bounds");
+
 
 func _game_over():
 	dead = true
-	get_node("/root/Node2D/GameOver").text = "GAME OVER"
+	
+	playAnim("Death")
 	get_node("/root/Node2D/Death").play()
+	
+	var deathScreenScene = load("res://GameOverScreen.tscn")
+	var deathScreen = deathScreenScene.instance()
+	get_node("/root/Node2D/Foreground_Canvas").call_deferred("add_child", deathScreen)
+	
+	get_node("/root/Node2D/Background_Music").stop()
 
 func _physics_process(delta):
 	var force = Vector2(0, GRAVITY)
@@ -46,7 +55,8 @@ func _physics_process(delta):
 	var jump_end = Input.is_action_just_released("up")
 	
 	var stop = true
-	if !dead:
+	
+	if not dead:
 		if velocity.x == 0 and not jumping:
 			animToPlay = "Idle"
 		
@@ -74,10 +84,15 @@ func _physics_process(delta):
 				vlen = 0
 			
 			velocity.x = vlen * vsign
-	
-		velocity += force * delta
-		velocity = move_and_slide(velocity, Vector2(0, -1))
 		
+	else:
+		velocity.x = 0
+		force.x = 0
+		
+	velocity += force * delta
+	velocity = move_and_slide(velocity, Vector2(0, -1))
+	
+	if not dead:
 		if is_on_floor():
 			on_air_time = 0
 			
@@ -94,18 +109,15 @@ func _physics_process(delta):
 			
 			velocity.y = -clamp(jump_final_speed, JUMP_SPEED_MIN, JUMP_SPEED_MAX)
 			animToPlay = "Jump_Start"
+			get_node("Jump_Audio").play()
 			jumping = true
 			jump_final_speed = JUMP_SPEED_MIN
 		
 		on_air_time += delta
 		prev_jump_pressed = jump_end
 		
-		print("Anim to play: " + animToPlay)
-		
 		if lastAnim == "Jump_Start" and is_on_floor():
 			animToPlay = "Jump_End"
-		
-		print("Last Anim: " + lastAnim)
 		
 		playAnim(animToPlay)
 
@@ -126,3 +138,6 @@ func _on_TheWolf_hit():
 
 func _Area2D_Collision(body):
 	emit_signal("hit")
+	
+func get_center_pos():
+	return get_global_position() + get_node("CollisionSquare").get_global_position()

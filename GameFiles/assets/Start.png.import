@@ -7,10 +7,10 @@ path="res://.import/Start.png-32059e95b8f435b776d2ab2896f429ad.stex"
 [deps]
 
 source_file="res://assets/Start.png"
-source_md5="79f97076539a2dff4f373da4c65cd4e2"
+source_md5="efe4da251756c6086d2038481c28931e"
 
 dest_files=[ "res://.import/Start.png-32059e95b8f435b776d2ab2896f429ad.stex" ]
-dest_md5="2f213fce6baf47fd3b4ebe34f0c334ba"
+dest_md5="c279bd6c0c0d472985744f322a0a8dd1"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
