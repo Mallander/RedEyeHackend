@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+signal hit
 
 const GRAVITY = 900.0
 
@@ -30,6 +31,10 @@ var queued = false;
 var animToPlay = "";
 
 onready var animationPlayer = get_node("Sprite/AnimationPlayer");
+
+func _game_over():
+	dead = true
+	get_node("/root/Node2D/GameOver").text = "GAME OVER"
 
 func _physics_process(delta):
 	var force = Vector2(0, GRAVITY)
@@ -114,3 +119,9 @@ func playAnim(var animName):
 	if not lastAnim == animName:
 		animationPlayer.play(animName)
 		lastAnim = animName;
+
+func _on_TheWolf_hit():
+	_game_over()
+
+func _Area2D_Collision(body):
+	emit_signal("hit")
