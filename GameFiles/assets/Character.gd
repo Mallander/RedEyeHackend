@@ -4,7 +4,7 @@ extends KinematicBody2D
 const GRAVITY = 900.0
 
 const FLOOR_ANGLE_TOLERANCE = 40
-const WALK_FORCE = 600
+const WALK_FORCE = 900
 const WALK_MIN_SPEED = 10
 const WALK_MAX_SPEED = 200
 const STOP_FORCE = 1300

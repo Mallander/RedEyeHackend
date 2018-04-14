@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/PC Computer - Khendovir Chronicles Rinets Quest - Dire Wolf.png-480b8d9c1df9da076c180fcd6c203942.stex"
+
+[deps]
+
+source_file="res://sprite/PC Computer - Khendovir Chronicles Rinets Quest - Dire Wolf.png"
+source_md5="44276a4e8ce781f92da2749ccef6d492"
+
+dest_files=[ "res://.import/PC Computer - Khendovir Chronicles Rinets Quest - Dire Wolf.png-480b8d9c1df9da076c180fcd6c203942.stex" ]
+dest_md5="09acf8d0fcee93fd6135a32d3a35ccd3"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
