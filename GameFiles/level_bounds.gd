@@ -1,10 +1,11 @@
 extends Node2D
 
 func get_left():
-	return get_pos().x - get_scale().x * 32
+	print(get_global_position().x - get_global_position().x)
+	return get_global_position().x - get_global_position().x
 func get_right():
-	return get_pos().x + get_scale().x * 32
+	return get_global_position().x + get_global_position().x
 func get_top():
-	return get_pos().y - get_scale().y * 32
+	return get_global_position().y - get_global_position().y
 func get_bottom():
-	return get_pos().y + get_scale().y * 32
+	return get_global_position().y + get_global_position().y

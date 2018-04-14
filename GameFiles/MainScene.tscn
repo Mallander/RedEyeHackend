@@ -1,11 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/platform_tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://assets/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://level_bounds.gd" type="Script" id=2]
 [ext_resource path="res://assets/sky.png" type="Texture" id=3]
-[ext_resource path="res://level_bounds.gd" type="Script" id=4]
+[ext_resource path="res://assets/clouds_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/rocks.png" type="Texture" id=5]
+[ext_resource path="res://assets/ground_1.png" type="Texture" id=6]
+[ext_resource path="res://assets/clouds_2.png" type="Texture" id=7]
+[ext_resource path="res://assets/ground_2.png" type="Texture" id=8]
+[ext_resource path="res://assets/ground_3.png" type="Texture" id=9]
+[ext_resource path="res://Character/TheWolf.tscn" type="PackedScene" id=10]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -27,25 +33,20 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 0, 327697, 0, 0, 327698, 0, 0, 327699, 0, 0, 327700, 0, 0, 327701, 0, 0, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 327705, 0, 0, 327706, 0, 0, 327707, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 720917, 0, 0, 720918, 0, 0, 720919, 0, 0, 720920, 0, 0, 720921, 0, 0, 720922, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 917533, 0, 0, 917534, 0, 0, 917535, 0, 0, 917536, 0, 0 )
+tile_data = PoolIntArray( 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 0, 327697, 0, 0, 327698, 0, 0, 327699, 0, 0, 327700, 0, 0, 327701, 0, 0, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 327705, 0, 0, 327706, 0, 0, 327707, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 0, 524321, 0, 0, 524322, 0, 0, 589881, 0, 0, 589882, 0, 0, 589883, 0, 0, 589884, 0, 0, 589885, 0, 0, 589886, 0, 0, 589887, 0, 0, 589888, 0, 0, 589889, 0, 0, 589890, 0, 0, 589891, 0, 0, 589892, 0, 0, 589893, 0, 0, 589894, 0, 0, 589895, 0, 0, 589896, 0, 0, 589897, 0, 0, 589898, 0, 0, 589899, 0, 0, 589900, 0, 0, 720917, 0, 0, 720918, 0, 0, 720919, 0, 0, 720920, 0, 0, 720921, 0, 0, 720922, 0, 0, 786467, 0, 0, 786468, 0, 0, 786469, 0, 0, 786470, 0, 0, 786471, 0, 0, 786472, 0, 0, 786473, 0, 0, 786474, 0, 0, 786475, 0, 0, 786476, 0, 0, 786477, 0, 0, 786478, 0, 0, 786479, 0, 0, 786480, 0, 0, 786481, 0, 0, 786482, 0, 0, 786483, 0, 0, 786484, 0, 0, 786485, 0, 0, 786486, 0, 0, 786487, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 917533, 0, 0, 917534, 0, 0, 917535, 0, 0, 917536, 0, 0 )
 _sections_unfolded = [ "Cell" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Player" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Bounds" type="Node2D" parent="." index="1"]
 
-position = Vector2( 77.7299, 431.82 )
+position = Vector2( 2730, 524.999 )
+scale = Vector2( 85.3125, 16.4063 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
-
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer" index="0"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
 
 layer = -1
 offset = Vector2( 0, 0 )
@@ -60,15 +61,7 @@ scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = false
 _sections_unfolded = [ "Scroll" ]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground" index="0"]
-
-position = Vector2( 2.27197, 0 )
-motion_scale = Vector2( 0.5, 0.5 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 0, 0 )
-_sections_unfolded = [ "Material", "Motion" ]
-
-[node name="background" type="TextureRect" parent="CanvasLayer/ParallaxBackground/ParallaxLayer" index="0"]
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -83,12 +76,167 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 3 )
-stretch_mode = 0
+stretch_mode = 6
+_sections_unfolded = [ "Rect" ]
 
-[node name="bounds" type="Node2D" parent="." index="3"]
+[node name="Parallax Clouds" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
 
-position = Vector2( 1155.36, 559.105 )
-scale = Vector2( 36.0824, 17.528 )
-script = ExtResource( 4 )
+position = Vector2( -1024, -576 )
+z_index = 1
+motion_scale = Vector2( 0.2, 0.2 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion", "Transform", "Z Index" ]
+
+[node name="Clouds1" type="TextureRect" parent="ParallaxBackground/Parallax Clouds" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+stretch_mode = 2
+
+[node name="Parallax Rocks" type="ParallaxLayer" parent="ParallaxBackground" index="2"]
+
+position = Vector2( -896, -504 )
+z_index = 1
+motion_scale = Vector2( 0.3, 0.3 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Rocks" type="TextureRect" parent="ParallaxBackground/Parallax Rocks" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 2
+
+[node name="Parallax Ground 1" type="ParallaxLayer" parent="ParallaxBackground" index="3"]
+
+position = Vector2( -640, -360 )
+z_index = 1
+motion_scale = Vector2( 0.5, 0.5 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Ground1" type="TextureRect" parent="ParallaxBackground/Parallax Ground 1" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 6 )
+stretch_mode = 2
+
+[node name="Parallax Clouds 2" type="ParallaxLayer" parent="ParallaxBackground" index="4"]
+
+position = Vector2( -512, -288 )
+z_index = 1
+motion_scale = Vector2( 0.6, 0.6 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Clouds2" type="TextureRect" parent="ParallaxBackground/Parallax Clouds 2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 7 )
+stretch_mode = 2
+
+[node name="Parallax Ground 2" type="ParallaxLayer" parent="ParallaxBackground" index="5"]
+
+position = Vector2( -384, -216 )
+z_index = 1
+motion_scale = Vector2( 0.7, 0.7 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Ground2" type="TextureRect" parent="ParallaxBackground/Parallax Ground 2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 8 )
+stretch_mode = 2
+
+[node name="Parallax Ground 3" type="ParallaxLayer" parent="ParallaxBackground" index="6"]
+
+position = Vector2( -128, -72 )
+z_index = 1
+motion_scale = Vector2( 0.9, 0.9 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Ground3" type="TextureRect" parent="ParallaxBackground/Parallax Ground 3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+stretch_mode = 2
+
+[node name="TheWolf" parent="." index="3" instance=ExtResource( 10 )]
+
+position = Vector2( 140, 420 )
 
 

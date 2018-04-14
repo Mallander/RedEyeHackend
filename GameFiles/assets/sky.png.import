@@ -10,7 +10,7 @@ source_file="res://assets/sky.png"
 source_md5="01111aa827f1730d0aa5ab3bb508fdae"
 
 dest_files=[ "res://.import/sky.png-5f245714f6a8ddd8d2d452ade02334b8.stex" ]
-dest_md5="596994f1d684d43b1e0f3b1d273b90ba"
+dest_md5="157a383e765933f3558541ef3b138527"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
