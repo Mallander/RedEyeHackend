@@ -35,6 +35,7 @@ onready var animationPlayer = get_node("Sprite/AnimationPlayer");
 func _game_over():
 	dead = true
 	get_node("/root/Node2D/GameOver").text = "GAME OVER"
+	get_node("/root/Node2D/Death").play()
 
 func _physics_process(delta):
 	var force = Vector2(0, GRAVITY)
