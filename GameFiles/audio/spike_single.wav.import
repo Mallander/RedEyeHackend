@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/spike_single.wav-4d15b8b9751d700a698baed9752f2ae8.sample"
+
+[deps]
+
+source_file="res://audio/spike_single.wav"
+source_md5="446b2cc36c96fdda205d85d5d9fc86b5"
+
+dest_files=[ "res://.import/spike_single.wav-4d15b8b9751d700a698baed9752f2ae8.sample" ]
+dest_md5="0915cf8a33d93ca331c6aa1246e948f7"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

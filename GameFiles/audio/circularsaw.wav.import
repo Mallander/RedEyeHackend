@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/circularsaw.wav-0b2ccbe2718db2d9803b50cbe81536a7.sample"
+
+[deps]
+
+source_file="res://audio/circularsaw.wav"
+source_md5="31e18a760556f562f0e729b375d93eed"
+
+dest_files=[ "res://.import/circularsaw.wav-0b2ccbe2718db2d9803b50cbe81536a7.sample" ]
+dest_md5="bf3f9363b7b0990da6916f8ac660f1ae"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
