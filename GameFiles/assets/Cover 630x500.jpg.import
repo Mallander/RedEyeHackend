@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Cover 630x500.jpg-71b42cd46ccb48fe7dc9c56417ba845b.stex"
+
+[deps]
+
+source_file="res://assets/Cover 630x500.jpg"
+source_md5="e0a6d5fb15dc4ee801b7684a844ad9d9"
+
+dest_files=[ "res://.import/Cover 630x500.jpg-71b42cd46ccb48fe7dc9c56417ba845b.stex" ]
+dest_md5="2d54b22255bd9bf9df6e3fdb737bf09b"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

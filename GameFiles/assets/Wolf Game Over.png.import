@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Wolf Game Over.png-4bd1549ba78728bef3a7f06f93142607.stex"
+
+[deps]
+
+source_file="res://assets/Wolf Game Over.png"
+source_md5="c9716857acf2ecd93a33282b9bced11c"
+
+dest_files=[ "res://.import/Wolf Game Over.png-4bd1549ba78728bef3a7f06f93142607.stex" ]
+dest_md5="529abe2ca4b1a967ffef7c50caca7e29"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

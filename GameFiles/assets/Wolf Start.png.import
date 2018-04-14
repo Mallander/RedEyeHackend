@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Wolf Start.png-fe9a0eb31a55e8fb4ec85355c49ca1d0.stex"
+
+[deps]
+
+source_file="res://assets/Wolf Start.png"
+source_md5="4038720bc7ae197074b14f2121b93d01"
+
+dest_files=[ "res://.import/Wolf Start.png-fe9a0eb31a55e8fb4ec85355c49ca1d0.stex" ]
+dest_md5="b0ec83cd416f88c7098b4250e272b1a7"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
