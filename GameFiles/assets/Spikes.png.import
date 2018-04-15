@@ -7,10 +7,17 @@ path="res://.import/Spikes.png-ef995ee46f2ef7d2247d525907c05d16.stex"
 [deps]
 
 source_file="res://assets/Spikes.png"
+<<<<<<< HEAD
+source_md5="d4f0012c4f9f101853dac6f43af973f1"
+
+dest_files=[ "res://.import/Spikes.png-ef995ee46f2ef7d2247d525907c05d16.stex" ]
+dest_md5="0926499c554fbfbcbbad8587dbd19309"
+=======
 source_md5="c966cbd82e59413b96e97e53dbeaea07"
 
 dest_files=[ "res://.import/Spikes.png-ef995ee46f2ef7d2247d525907c05d16.stex" ]
 dest_md5="ccd9abc839e2de7b37ae877bc9a40894"
+>>>>>>> 548f1efeafda621ee68080051b22784fba9db834
 
 [params]
 
