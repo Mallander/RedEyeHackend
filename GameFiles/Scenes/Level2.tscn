@@ -121,7 +121,7 @@ _sections_unfolded = [ "Z Index" ]
 
 editor/display_folded = true
 position = Vector2( 70, 35 )
-_sections_unfolded = [ "Z Index" ]
+_sections_unfolded = [ "Collision", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
 
 [node name="Light2D" type="Light2D" parent="TheWolf" index="6"]
 
@@ -286,48 +286,50 @@ position = Vector2( 630, 490 )
 
 [node name="ParallaxBackground" parent="." index="20" instance=ExtResource( 13 )]
 
-[node name="Enemy" parent="." index="21" instance=ExtResource( 14 )]
+[node name="Food11" parent="." index="21" instance=ExtResource( 14 )]
 
 position = Vector2( 461.002, 19.0002 )
 
-[node name="Enemy2" parent="." index="22" instance=ExtResource( 14 )]
+[node name="Food12" parent="." index="22" instance=ExtResource( 14 )]
 
 position = Vector2( 23.0009, 255.001 )
 
-[node name="Enemy3" parent="." index="23" instance=ExtResource( 14 )]
+[node name="Food13" parent="." index="23" instance=ExtResource( 14 )]
 
 position = Vector2( 397.002, 364.001 )
 
-[node name="Enemy4" parent="." index="24" instance=ExtResource( 14 )]
+[node name="Food14" parent="." index="24" instance=ExtResource( 14 )]
 
 position = Vector2( 1143.81, 488.679 )
 
-[node name="Enemy5" parent="." index="25" instance=ExtResource( 14 )]
+[node name="Food15" parent="." index="25" instance=ExtResource( 14 )]
 
 position = Vector2( 791.646, 499.793 )
 
-[node name="Enemy6" parent="." index="26" instance=ExtResource( 14 )]
+[node name="Food16" parent="." index="26" instance=ExtResource( 14 )]
 
 position = Vector2( 650.418, 699.246 )
 
-[node name="Enemy7" parent="." index="27" instance=ExtResource( 14 )]
+[node name="Food17" parent="." index="27" instance=ExtResource( 14 )]
 
 position = Vector2( 450.297, 712.935 )
 
-[node name="Enemy8" parent="." index="28" instance=ExtResource( 14 )]
+[node name="Food18" parent="." index="28" instance=ExtResource( 14 )]
 
 position = Vector2( 848.103, 715.643 )
 
-[node name="Enemy9" parent="." index="29" instance=ExtResource( 14 )]
+[node name="Food19" parent="." index="29" instance=ExtResource( 14 )]
 
 position = Vector2( 2606.5, 906.973 )
 
-[node name="Enemy10" parent="." index="30" instance=ExtResource( 14 )]
+[node name="Food20" parent="." index="30" instance=ExtResource( 14 )]
 
 position = Vector2( 2065.9, 485.505 )
 
 [connection signal="draw" from="TheWolf" to="TheWolf" method="_on_TheWolf_draw"]
 
 [connection signal="hit" from="TheWolf" to="TheWolf" method="_on_TheWolf_hit"]
+
+[connection signal="points_10" from="TheWolf" to="TheWolf" method="_on_TheWolf_points_10"]
 
 
