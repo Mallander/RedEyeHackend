@@ -19,6 +19,9 @@ func _ready():
 
 func _on_player_body_entered(body):
 	print(body.get_name(), " entered body")
-	if body.get_name() == "TheWolf":
+	
+	if not NextScene:
+		get_node("/root/Node2D/TheWolf").won_Game()
+	elif body.get_name() == "TheWolf":
 		get_node("/root/Node2D/TheWolf").Level_End_entered(NextScene)
 	
