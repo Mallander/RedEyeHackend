@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/tiles_spritesheet.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Enemy.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 
@@ -77,14 +78,153 @@ bounce = 0.0
 build_mode = 0
 polygon = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
 
-[node name="Dark_Background" type="Sprite" parent="." index="3"]
+[node name="Dark_Rock" type="Sprite" parent="." index="3"]
 
-position = Vector2( 420, 0 )
+position = Vector2( 420, 140 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 576, 70, 70 )
 region_filter_clip = true
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Dark_Rock" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Dark_Rock/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+
+[node name="Wooden_Bridge" type="Sprite" parent="." index="4"]
+
+position = Vector2( 0, 140 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 288, 720, 70, 70 )
+region_filter_clip = true
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wooden_Bridge" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wooden_Bridge/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0, 50, 70, 50, 70, 70, 0, 70 )
+
+[node name="Water" type="Sprite" parent="." index="5"]
+
+position = Vector2( 560, 0 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 504, 216, 70, 70 )
+region_filter_clip = true
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Water" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Water/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+disabled = true
+
+[node name="Water_Top" type="Sprite" parent="." index="6"]
+
+position = Vector2( 700, 0 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 432, 576, 70, 70 )
+region_filter_clip = true
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Water_Top" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Water_Top/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+disabled = true
+
+[node name="Dark_Background" type="Sprite" parent="." index="7"]
+
+position = Vector2( 420, 0 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 72, 288, 70, 70 )
+region_filter_clip = true
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="Rope_Down" type="Sprite" parent="." index="8"]
+
+position = Vector2( 840, 0 )
+z_index = -1
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 432, 72, 70, 70 )
+region_filter_clip = true
+_sections_unfolded = [ "Offset", "Region", "Transform", "Z Index" ]
+
+[node name="Arrow_Right" type="Sprite" parent="." index="9"]
+
+position = Vector2( 140, 140 )
+z_index = -1
+z_as_relative = false
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 288, 216, 70, 70 )
+region_filter_clip = true
+_sections_unfolded = [ "Offset", "Region", "Transform", "Z Index" ]
+
+[node name="Fence" type="Sprite" parent="." index="10"]
+
+position = Vector2( 280, 140 )
+z_index = 2
+z_as_relative = false
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 504, 72, 70, 70 )
+region_filter_clip = true
+_sections_unfolded = [ "Offset", "Region", "Transform", "Z Index" ]
 
 
