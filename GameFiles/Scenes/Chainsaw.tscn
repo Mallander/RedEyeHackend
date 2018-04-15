@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/chainsaw-image.png" type="Texture" id=2]
 [ext_resource path="res://audio/Chainsaw.wav" type="AudioStream" id=3]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 
 resource_name = "Chainsaw_Idle"
 length = 0.5
@@ -35,12 +35,12 @@ tracks/1/keys = {
 "values": [ 0.0, 1.5, -0.6, 0.5, 1.4 ]
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 46.0274, 46.0274 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 67.2757, 24.2181 )
@@ -71,7 +71,7 @@ autoplay = "Chainsaw_Idle"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Chainsaw_Idle = SubResource( 3 )
+anims/Chainsaw_Idle = SubResource( 1 )
 blend_times = [  ]
 
 [node name="Area2D" type="Area2D" parent="." index="1"]
@@ -89,14 +89,14 @@ audio_bus_name = "Master"
 
 position = Vector2( 95, -10 )
 scale = Vector2( 0.760417, 0.760417 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" index="1"]
 
 position = Vector2( 8.04393, 6.60556 )
 scale = Vector2( 0.760417, 0.760417 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Chainsaw_sound" type="AudioStreamPlayer2D" parent="." index="2"]
