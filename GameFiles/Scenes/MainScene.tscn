@@ -271,6 +271,8 @@ position = Vector2( 483.804, 506.486 )
 
 position = Vector2( 1312.84, 382.708 )
 
+[connection signal="draw" from="TheWolf" to="TheWolf" method="_on_TheWolf_draw"]
+
 [connection signal="hit" from="TheWolf" to="TheWolf" method="_on_TheWolf_hit"]
 
 [connection signal="points_10" from="TheWolf" to="TheWolf" method="_on_TheWolf_points_10"]
