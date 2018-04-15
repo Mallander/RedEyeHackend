@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/platform_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Scripts/level_bounds.gd" type="Script" id=2]
@@ -9,12 +9,13 @@
 [ext_resource path="res://assets/clouds_2.png" type="Texture" id=7]
 [ext_resource path="res://assets/ground_2.png" type="Texture" id=8]
 [ext_resource path="res://assets/ground_3.png" type="Texture" id=9]
-[ext_resource path="res://Scenes/TheWolf.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Torch.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/light.png" type="Texture" id=11]
-[ext_resource path="res://audio/death.wav" type="AudioStream" id=12]
-[ext_resource path="res://audio/Background_Music.wav" type="AudioStream" id=13]
-[ext_resource path="res://Scenes/Level_End.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/TheWolf.tscn" type="PackedScene" id=12]
+[ext_resource path="res://audio/death.wav" type="AudioStream" id=13]
+[ext_resource path="res://audio/Background_Music.wav" type="AudioStream" id=14]
+[ext_resource path="res://Scenes/Level_End.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=16]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -240,14 +241,73 @@ size_flags_vertical = 1
 texture = ExtResource( 9 )
 stretch_mode = 2
 
-[node name="TheWolf" parent="." index="3" instance=ExtResource( 10 )]
+[node name="Sprite2" parent="." index="3" instance=ExtResource( 10 )]
 
-editor/display_folded = true
+position = Vector2( 840, 700 )
+
+[node name="Light" type="Light2D" parent="Sprite2" index="2"]
+
+position = Vector2( 35, 35 )
+enabled = true
+editor_only = false
+texture = ExtResource( 11 )
+offset = Vector2( 0, 0 )
+texture_scale = 0.7
+color = Color( 0.964844, 0.938314, 0.765091, 1 )
+energy = 3.5
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0.710938, 0.0166626, 0.0166626, 0.740353 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 10.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Sprite3" parent="." index="4" instance=ExtResource( 10 )]
+
+position = Vector2( 1540, 910 )
+
+[node name="Light" type="Light2D" parent="Sprite3" index="2"]
+
+position = Vector2( 35, 35 )
+enabled = true
+editor_only = false
+texture = ExtResource( 11 )
+offset = Vector2( 0, 0 )
+texture_scale = 0.7
+color = Color( 0.964844, 0.938314, 0.765091, 1 )
+energy = 3.5
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0.710938, 0.0166626, 0.0166626, 0.740353 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 10.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="TheWolf" parent="." index="5" instance=ExtResource( 12 )]
+
 position = Vector2( 141.223, 907.412 )
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Light2D" type="Light2D" parent="TheWolf" index="6"]
 
-visible = false
 position = Vector2( -3.46082, 17.9166 )
 enabled = true
 editor_only = false
@@ -270,27 +330,25 @@ shadow_gradient_length = 10.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
-_sections_unfolded = [ "Shadow" ]
 
-[node name="Death" type="AudioStreamPlayer" parent="." index="4"]
+[node name="Death" type="AudioStreamPlayer" parent="." index="6"]
 
-stream = ExtResource( 12 )
+stream = ExtResource( 13 )
 volume_db = -20.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Background_Music" type="AudioStreamPlayer" parent="." index="5"]
+[node name="Background_Music" type="AudioStreamPlayer" parent="." index="7"]
 
-stream = ExtResource( 13 )
+stream = ExtResource( 14 )
 volume_db = -20.0
 autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="Foreground_Canvas" type="CanvasLayer" parent="." index="6"]
+[node name="Foreground_Canvas" type="CanvasLayer" parent="." index="8"]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -299,7 +357,6 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Dark_Overlay" type="Panel" parent="Foreground_Canvas" index="0"]
 
-visible = false
 self_modulate = Color( 0, 0, 0, 0.408863 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -315,7 +372,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Light2D" type="Light2D" parent="Foreground_Canvas" index="1"]
 
-visible = false
 position = Vector2( 960.346, 739.94 )
 enabled = true
 editor_only = false
@@ -340,32 +396,32 @@ shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Range" ]
 
-[node name="Level_End" parent="." index="7" instance=ExtResource( 14 )]
+[node name="Level_End" parent="." index="9" instance=ExtResource( 15 )]
 
 position = Vector2( 3080, 840 )
 NextScene = "res://Scenes/MainScene.tscn"
 
-[node name="Enemy" parent="." index="8" instance=ExtResource( 15 )]
+[node name="Enemy" parent="." index="10" instance=ExtResource( 16 )]
 
 position = Vector2( 420, 980 )
 
-[node name="Enemy2" parent="." index="9" instance=ExtResource( 15 )]
+[node name="Enemy2" parent="." index="11" instance=ExtResource( 16 )]
 
 position = Vector2( 700, 700 )
 
-[node name="Enemy3" parent="." index="10" instance=ExtResource( 15 )]
+[node name="Enemy3" parent="." index="12" instance=ExtResource( 16 )]
 
 position = Vector2( 1190, 910 )
 
-[node name="Enemy4" parent="." index="11" instance=ExtResource( 15 )]
+[node name="Enemy4" parent="." index="13" instance=ExtResource( 16 )]
 
 position = Vector2( 1400, 770 )
 
-[node name="Enemy5" parent="." index="12" instance=ExtResource( 15 )]
+[node name="Enemy5" parent="." index="14" instance=ExtResource( 16 )]
 
 position = Vector2( 1820, 910 )
 
-[node name="Enemy6" parent="." index="13" instance=ExtResource( 15 )]
+[node name="Enemy6" parent="." index="15" instance=ExtResource( 16 )]
 
 position = Vector2( 1610, 840 )
 
