@@ -14,7 +14,7 @@
 [ext_resource path="res://Scenes/Spike.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Food.tscn" type="PackedScene" id=13]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -270,6 +270,38 @@ position = Vector2( 483.804, 506.486 )
 [node name="Food2" parent="." index="16" instance=ExtResource( 13 )]
 
 position = Vector2( 1312.84, 382.708 )
+
+[node name="Food3" parent="." index="17" instance=ExtResource( 13 )]
+
+position = Vector2( 1029, 799.421 )
+
+[node name="Food4" parent="." index="18" instance=ExtResource( 13 )]
+
+position = Vector2( 1757.69, 507.421 )
+
+[node name="Food5" parent="." index="19" instance=ExtResource( 13 )]
+
+position = Vector2( 2354.99, 479.378 )
+
+[node name="Food6" parent="." index="20" instance=ExtResource( 13 )]
+
+position = Vector2( 2394.27, 868.598 )
+
+[node name="Food7" parent="." index="21" instance=ExtResource( 13 )]
+
+position = Vector2( 2642.27, 820.598 )
+
+[node name="Food8" parent="." index="22" instance=ExtResource( 13 )]
+
+position = Vector2( 3124.59, 742 )
+
+[node name="Food9" parent="." index="23" instance=ExtResource( 13 )]
+
+position = Vector2( 1513.97, 862 )
+
+[node name="Food10" parent="." index="24" instance=ExtResource( 13 )]
+
+position = Vector2( 791.969, 782 )
 
 [connection signal="draw" from="TheWolf" to="TheWolf" method="_on_TheWolf_draw"]
 
