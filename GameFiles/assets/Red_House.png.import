@@ -7,10 +7,17 @@ path="res://.import/Red_House.png-82b96dc4785a40179e3f92b3ad0d06a8.stex"
 [deps]
 
 source_file="res://assets/Red_House.png"
+<<<<<<< HEAD
 source_md5="d484c38782c356168d12608999f144a8"
 
 dest_files=[ "res://.import/Red_House.png-82b96dc4785a40179e3f92b3ad0d06a8.stex" ]
 dest_md5="7e5252f0a4e1e22f4513693980e5818e"
+=======
+source_md5="511ab43e94be59a9d2da6a6c91b29ccf"
+
+dest_files=[ "res://.import/Red_House.png-82b96dc4785a40179e3f92b3ad0d06a8.stex" ]
+dest_md5="9b2f5ee70ccc6c5489a440e386abea42"
+>>>>>>> 7c82386a3fabe05241d104e9fadb850347074031
 
 [params]
 
