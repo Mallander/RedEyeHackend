@@ -35,6 +35,11 @@ var timer = 60 # seconds
 onready var animationPlayer = get_node("Sprite/AnimationPlayer");
 onready var boundary = get_node("/root/Node2D/Bounds");
 
+func won_Game():
+	var welldoneScene = load("res://Scenes/WellDone.tscn")
+	var welldone = welldoneScene.instance()
+	get_node("/root/Node2D/Foreground_Canvas").call_deferred("add_child", welldone)
+
 func _game_over():
 	dead = true
 	

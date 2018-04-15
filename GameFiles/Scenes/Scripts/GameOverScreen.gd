@@ -18,7 +18,7 @@ func _ready():
 
 func _on_Button_pressed():
 	ProjectSettings.set("global_score", 0) # reset score to 0
-	get_tree().reload_current_scene()
+	get_tree().change_scene("res://Scenes/Main Menu.tscn")
 	
 	pass # replace with function body
 

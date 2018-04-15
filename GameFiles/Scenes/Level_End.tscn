@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Level_End.gd" type="Script" id=1]
-[ext_resource path="res://assets/Red_House.png" type="Texture" id=2]
+[ext_resource path="res://assets/Red_House_2.png" type="Texture" id=2]
 
-[node name="Level_End" type="StaticBody2D" index="0"]
+[node name="Level_End" type="StaticBody2D"]
 
 input_pickable = false
 collision_layer = 1

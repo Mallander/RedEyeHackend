@@ -14,7 +14,7 @@
 [ext_resource path="res://Scenes/Chainsaw_Moving.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/ParallaxBackground.tscn" type="PackedScene" id=13]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -216,6 +216,7 @@ _sections_unfolded = [ "Range" ]
 
 editor/display_folded = true
 position = Vector2( 1295, 560 )
+NextScene = "res://Scenes/WellDone.tscn"
 
 [node name="Level_End_Light" type="Light2D" parent="Level_End" index="2"]
 
