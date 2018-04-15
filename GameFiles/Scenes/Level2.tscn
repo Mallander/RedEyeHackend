@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/Bottom_Boundary.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/platform_tileset.tres" type="TileSet" id=2]
@@ -13,8 +13,9 @@
 [ext_resource path="res://Scenes/Chainsaw.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Chainsaw_Moving.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/ParallaxBackground.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Food.tscn" type="PackedScene" id=14]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -284,6 +285,46 @@ position = Vector2( 2800, 910 )
 position = Vector2( 630, 490 )
 
 [node name="ParallaxBackground" parent="." index="20" instance=ExtResource( 13 )]
+
+[node name="Enemy" parent="." index="21" instance=ExtResource( 14 )]
+
+position = Vector2( 461.002, 19.0002 )
+
+[node name="Enemy2" parent="." index="22" instance=ExtResource( 14 )]
+
+position = Vector2( 23.0009, 255.001 )
+
+[node name="Enemy3" parent="." index="23" instance=ExtResource( 14 )]
+
+position = Vector2( 397.002, 364.001 )
+
+[node name="Enemy4" parent="." index="24" instance=ExtResource( 14 )]
+
+position = Vector2( 1143.81, 488.679 )
+
+[node name="Enemy5" parent="." index="25" instance=ExtResource( 14 )]
+
+position = Vector2( 791.646, 499.793 )
+
+[node name="Enemy6" parent="." index="26" instance=ExtResource( 14 )]
+
+position = Vector2( 650.418, 699.246 )
+
+[node name="Enemy7" parent="." index="27" instance=ExtResource( 14 )]
+
+position = Vector2( 450.297, 712.935 )
+
+[node name="Enemy8" parent="." index="28" instance=ExtResource( 14 )]
+
+position = Vector2( 848.103, 715.643 )
+
+[node name="Enemy9" parent="." index="29" instance=ExtResource( 14 )]
+
+position = Vector2( 2606.5, 906.973 )
+
+[node name="Enemy10" parent="." index="30" instance=ExtResource( 14 )]
+
+position = Vector2( 2065.9, 485.505 )
 
 [connection signal="draw" from="TheWolf" to="TheWolf" method="_on_TheWolf_draw"]
 
