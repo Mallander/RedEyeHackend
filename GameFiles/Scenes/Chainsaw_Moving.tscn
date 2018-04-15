@@ -1,0 +1,164 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://assets/chainsaw-image.png" type="Texture" id=2]
+[ext_resource path="res://audio/Chainsaw.wav" type="AudioStream" id=3]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Chainsaw_Moving"
+length = 4.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 87.7437, 34.3298 ), Vector2( -86.2562, 34.3507 ), Vector2( 87.7437, 34.3298 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.8, 0.8, 0.9, 1, 1.2, 1.3, 1.3, 1.4, 1.5, 1.7, 1.8, 1.8, 1.9, 2, 2.2, 2.3, 2.4, 2.5, 2.7, 2.8, 2.8, 2.9, 3, 3.2, 3.3, 3.3, 3.4, 3.5, 3.7, 3.7, 3.8, 3.8, 3.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.5, -0.6, 0.0, 1.5, -0.6, 0.5, 1.4, 0.0, 1.5, -0.6, 0.5, 1.4, 0.0, 1.5, -0.6, 0.5, 1.4, 0.0, 1.5, -0.6, 0.5, 0.0, 1.5, -0.6, 0.5, 1.4, 0.0, 1.5, -0.6, 0.5, 1.4, 0.0, 1.5, -0.6, 0.5, 0.0, 1.4, 1.5, -0.6 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0.0727997, 0.0687698 ), Vector2( -0.0728, 0.06877 ), Vector2( 0.0727997, 0.0687698 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Area2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.9, 2, 3.9, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 44.5599, 45 ), Vector2( -120.04, 45 ), Vector2( -43.4401, 45 ), Vector2( 121.16, 45 ), Vector2( 44.5599, 45 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Area2D:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 1, 1 ), Vector2( -1, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 46.0274, 46.0274 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 67.2757, 24.2181 )
+
+[node name="Chainsaw_Moving" type="StaticBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 59.8676, 34.3332 )
+rotation = 0.00534458
+scale = Vector2( 0.0727997, 0.0687698 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite" index="0"]
+
+root_node = NodePath("..")
+autoplay = "Chainsaw_Moving"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Chainsaw_Moving = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Area2D" type="Area2D" parent="." index="1"]
+
+position = Vector2( 16.8019, 45 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( 95, -10 )
+scale = Vector2( 0.760417, 0.760417 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" index="1"]
+
+position = Vector2( 8.04393, 6.60556 )
+scale = Vector2( 0.760417, 0.760417 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Chainsaw_sound" type="AudioStreamPlayer2D" parent="." index="2"]
+
+stream = ExtResource( 3 )
+volume_db = -10.0
+autoplay = true
+max_distance = 200.0
+attenuation = -0.5
+bus = "Master"
+area_mask = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_player_body_entered"]
+
+
