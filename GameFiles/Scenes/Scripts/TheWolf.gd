@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal hit
+signal points_10
 
 const GRAVITY = 2500.0
 
@@ -30,6 +31,7 @@ var lastAnim = "";
 var queued = false;
 var animToPlay = "";
 var timer = 60 # seconds
+var score = 0 # start with 0 score
 
 onready var animationPlayer = get_node("Sprite/AnimationPlayer");
 onready var boundary = get_node("/root/Node2D/Bounds");
@@ -46,6 +48,10 @@ func _game_over():
 	get_node("/root/Node2D/Foreground_Canvas").call_deferred("add_child", deathScreen)
 	
 	get_node("/root/Node2D/Background_Music").stop()
+
+func update_score_10():
+		score += 10
+		get_node("/root/Node2D/ParallaxBackground/Score").text = "Score " + str(score)
 
 func _physics_process(delta):
 	var force = Vector2(0, GRAVITY)
@@ -161,3 +167,6 @@ func get_center_pos():
 
 func Level_End_entered(var nextScene):
 	get_tree().change_scene(nextScene)
+
+func _on_TheWolf_points_10():
+	update_score_10()
