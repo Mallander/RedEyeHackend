@@ -31,7 +31,7 @@ var lastAnim = "";
 var queued = false;
 var animToPlay = "";
 var timer = 60 # seconds
-var score = 0 # start with 0 score
+
 
 onready var animationPlayer = get_node("Sprite/AnimationPlayer");
 onready var boundary = get_node("/root/Node2D/Bounds");
@@ -49,9 +49,9 @@ func _game_over():
 	
 	get_node("/root/Node2D/Background_Music").stop()
 
-func update_score_10():
-		score += 10
-		get_node("/root/Node2D/ParallaxBackground/Score").text = "Score " + str(score)
+func set_score(var add_score):
+	ProjectSettings.set("global_score", ProjectSettings.get_setting("global_score")+add_score)
+	get_node("/root/Node2D/ParallaxBackground/Score").text = "Score " + str(ProjectSettings.get_setting("global_score"))
 
 func _physics_process(delta):
 	var force = Vector2(0, GRAVITY)
@@ -143,8 +143,6 @@ func _physics_process(delta):
 		get_node("/root/Node2D/ParallaxBackground/Timer").text = "Timer " + str(int(timer))
 		if timer < 0:
 			emit_signal("hit")
-			
-	get_node("Camera2D").align()
 
 func playAnim(var animName):
 	
@@ -171,4 +169,7 @@ func Level_End_entered(var nextScene):
 	get_tree().change_scene(nextScene)
 
 func _on_TheWolf_points_10():
-	update_score_10()
+	set_score(10)
+
+func _on_TheWolf_draw():
+	set_score(0)

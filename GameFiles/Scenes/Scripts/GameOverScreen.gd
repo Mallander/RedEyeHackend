@@ -17,6 +17,10 @@ func _ready():
 
 
 func _on_Button_pressed():
+	ProjectSettings.set("global_score", 0) # reset score to 0
 	get_tree().reload_current_scene()
 	
 	pass # replace with function body
+
+func _on_Panel_draw():
+	get_node("Score").text = "Final Score " + str(ProjectSettings.get_setting("global_score"))

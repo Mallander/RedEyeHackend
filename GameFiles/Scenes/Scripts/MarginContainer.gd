@@ -5,6 +5,7 @@ extends MarginContainer
 # var b = "textvar"
 
 func _ready():
+	ProjectSettings.set("global_score", 0) # reset score to 0
 	get_node("StartButton")
 	# Called every time the node is added to the scene.
 	# Initialization here
@@ -17,5 +18,6 @@ func _ready():
 
 
 func _on_Start_pressed():
+	ProjectSettings.set("global_score", 0) # reset score to 0
 	get_tree().change_scene("res://Scenes/MainScene.tscn")
 	pass # replace with function body
