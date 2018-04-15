@@ -7,10 +7,10 @@ path="res://.import/clouds_2.png-0f2416f56bf0065f51d50dcc292eacf9.stex"
 [deps]
 
 source_file="res://assets/clouds_2.png"
-source_md5="30221fc3d1f63b7e3864514874450e5c"
+source_md5="588ec238c7390ac1288c40c305a8c672"
 
 dest_files=[ "res://.import/clouds_2.png-0f2416f56bf0065f51d50dcc292eacf9.stex" ]
-dest_md5="bafa74f8ccdd7c064949a993f7018731"
+dest_md5="5f0b3baf165eec08112845dc2fdae054"
 
 [params]
 

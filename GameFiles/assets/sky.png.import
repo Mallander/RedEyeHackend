@@ -7,10 +7,10 @@ path="res://.import/sky.png-5f245714f6a8ddd8d2d452ade02334b8.stex"
 [deps]
 
 source_file="res://assets/sky.png"
-source_md5="01111aa827f1730d0aa5ab3bb508fdae"
+source_md5="fa93ec71bccaeef8b3a0fcb56817db6b"
 
 dest_files=[ "res://.import/sky.png-5f245714f6a8ddd8d2d452ade02334b8.stex" ]
-dest_md5="157a383e765933f3558541ef3b138527"
+dest_md5="82b94447400e1d456220a931ff895087"
 
 [params]
 

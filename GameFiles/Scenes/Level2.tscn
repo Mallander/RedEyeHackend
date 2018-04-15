@@ -20,7 +20,7 @@
 [ext_resource path="res://Scenes/Chainsaw.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Chainsaw_Moving.tscn" type="PackedScene" id=19]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -390,7 +390,6 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Dark_Overlay" type="Panel" parent="Foreground_Canvas" index="0"]
 
-visible = false
 self_modulate = Color( 0, 0, 0, 0.408863 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -406,7 +405,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Light2D" type="Light2D" parent="Foreground_Canvas" index="1"]
 
-visible = false
 position = Vector2( 945, 735 )
 enabled = true
 editor_only = false
