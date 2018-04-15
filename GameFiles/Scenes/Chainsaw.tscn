@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://assets/chainsaw-image.png" type="Texture" id=2]
+[ext_resource path="res://audio/Chainsaw.wav" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=3]
 
@@ -97,6 +98,16 @@ position = Vector2( 8.04393, 6.60556 )
 scale = Vector2( 0.760417, 0.760417 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="Chainsaw_sound" type="AudioStreamPlayer2D" parent="." index="2"]
+
+stream = ExtResource( 3 )
+volume_db = -10.0
+autoplay = true
+max_distance = 200.0
+attenuation = -0.5
+bus = "Master"
+area_mask = 1
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_player_body_entered"]
 

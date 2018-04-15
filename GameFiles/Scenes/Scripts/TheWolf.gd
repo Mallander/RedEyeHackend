@@ -29,6 +29,7 @@ var playingAnim = "";
 var lastAnim = "";
 var queued = false;
 var animToPlay = "";
+var timer = 60 # seconds
 
 onready var animationPlayer = get_node("Sprite/AnimationPlayer");
 onready var boundary = get_node("/root/Node2D/Bounds");
@@ -131,7 +132,11 @@ func _physics_process(delta):
 			animToPlay = "Jump_End"
 		
 		playAnim(animToPlay)
-
+		
+		timer -= delta
+		get_node("/root/Node2D/ParallaxBackground/Timer").text = "Timer " + str(int(timer))
+		if timer < 0:
+			emit_signal("hit")
 
 func playAnim(var animName):
 	
