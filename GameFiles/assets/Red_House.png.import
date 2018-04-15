@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/log-clipart-brown-log-with-green-leaf.svg-c791ee4740a3f890960e1c81ee2e2eab.stex"
+path="res://.import/Red_House.png-82b96dc4785a40179e3f92b3ad0d06a8.stex"
 
 [deps]
 
-source_file="res://assets/log-clipart-brown-log-with-green-leaf.svg"
-source_md5="f6e5707007b63b76da8727a93ef38a73"
+source_file="res://assets/Red_House.png"
+source_md5="511ab43e94be59a9d2da6a6c91b29ccf"
 
-dest_files=[ "res://.import/log-clipart-brown-log-with-green-leaf.svg-c791ee4740a3f890960e1c81ee2e2eab.stex" ]
-dest_md5="0a3e8c986a95bb3f5f6c2aa0c1797870"
+dest_files=[ "res://.import/Red_House.png-82b96dc4785a40179e3f92b3ad0d06a8.stex" ]
+dest_md5="9b2f5ee70ccc6c5489a440e386abea42"
 
 [params]
 
