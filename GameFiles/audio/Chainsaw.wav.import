@@ -10,7 +10,7 @@ source_file="res://audio/Chainsaw.wav"
 source_md5="bedaf24c28a5abe644465a22bafae73a"
 
 dest_files=[ "res://.import/Chainsaw.wav-08a2c9c1515fee952733a773d858ed88.sample" ]
-dest_md5="e680dd83c3f8f0698b59a239b9a0cac9"
+dest_md5="7aa5d1eff657c2a61348342aaded1256"
 
 [params]
 
@@ -20,5 +20,5 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop=true
 compress/mode=0
