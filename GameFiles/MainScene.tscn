@@ -57,7 +57,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
 
-editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -261,6 +260,7 @@ position = Vector2( -913.207, 1261.68 )
 
 [node name="Light2D" type="Light2D" parent="Area2D/TheWolf" index="4"]
 
+visible = false
 position = Vector2( -3.46082, 17.9167 )
 enabled = true
 editor_only = false
@@ -354,6 +354,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Dark_Overlay" type="Panel" parent="Foreground_Canvas" index="0"]
 
+visible = false
 self_modulate = Color( 0, 0, 0, 0.408863 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -369,6 +370,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Light2D" type="Light2D" parent="Foreground_Canvas" index="1"]
 
+visible = false
 position = Vector2( 960.346, 739.94 )
 enabled = true
 editor_only = false
@@ -393,9 +395,9 @@ shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Range" ]
 
-[connection signal="body_entered" from="Area2D" to="Area2D/TheWolf" method="_Area2D_Collision"]
-
 [connection signal="body_entered" from="Area2D" to="Area2D/TheWolf" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Area2D" to="Area2D/TheWolf" method="_Area2D_Collision"]
 
 [connection signal="hit" from="Area2D/TheWolf" to="Area2D/TheWolf" method="_on_TheWolf_hit"]
 

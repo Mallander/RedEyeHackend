@@ -9,7 +9,7 @@ const WALK_FORCE = 2000
 const WALK_MIN_SPEED = 10
 const WALK_MAX_SPEED = 500
 const STOP_FORCE = 2000
-const JUMP_SPEED_MIN = 650
+const JUMP_SPEED_MIN = 450
 const JUMP_SPEED_MAX = 1050
 const JUMP_SPEED_INCREASE = 40
 const JUMP_SPEED = 650
@@ -60,14 +60,14 @@ func _physics_process(delta):
 		if velocity.x == 0 and not jumping:
 			animToPlay = "Idle"
 		
-		if walk_left:
+		if walk_left and not walk_right:
 			get_node("Sprite").set_flip_h(true)
 			if velocity.x <= WALK_MIN_SPEED and velocity.x > -WALK_MAX_SPEED:
 				force.x -= WALK_FORCE
 				stop = false
 				if is_on_floor() and not jumping:
 					animToPlay = "Walk"
-		elif walk_right:
+		elif walk_right and not walk_left:
 			get_node("Sprite").set_flip_h(false)
 			if velocity.x >= -WALK_MIN_SPEED and velocity.x < WALK_MAX_SPEED:
 				force.x += WALK_FORCE
@@ -105,7 +105,7 @@ func _physics_process(delta):
 		if jump_start:
 			jump_final_speed += JUMP_SPEED_INCREASE
 			
-		if on_air_time < JUMP_MAX_AIRBORNE_TIME and jump_end and not prev_jump_pressed and not jumping:
+		if (jump_final_speed == JUMP_SPEED_MAX or jump_end) and on_air_time < JUMP_MAX_AIRBORNE_TIME and not prev_jump_pressed and not jumping:
 			
 			velocity.y = -clamp(jump_final_speed, JUMP_SPEED_MIN, JUMP_SPEED_MAX)
 			animToPlay = "Jump_Start"
