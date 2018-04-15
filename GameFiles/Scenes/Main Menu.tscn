@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/Scripts/MarginContainer.gd" type="Script" id=2]
 [ext_resource path="res://assets/Start.png" type="Texture" id=3]
 
-[node name="MarginContainer" type="MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -16,7 +16,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-_sections_unfolded = [ "Anchor" ]
+_sections_unfolded = [ "custom_constants" ]
 
 [node name="Menu Background" type="TextureRect" parent="." index="0"]
 
@@ -25,8 +25,8 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_right = 1288.0
-margin_bottom = 720.0
+margin_right = 1928.0
+margin_bottom = 1080.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -43,8 +43,8 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_right = 1288.0
-margin_bottom = 720.0
+margin_right = 1928.0
+margin_bottom = 1080.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -64,8 +64,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 100.0
 margin_top = 300.0
-margin_right = 400.0
-margin_bottom = 356.0
+margin_right = 1044.0
+margin_bottom = 477.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -78,7 +78,7 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 texture_normal = ExtResource( 3 )
-stretch_mode = 4
+_sections_unfolded = [ "Textures" ]
 
 [connection signal="pressed" from="MarginContainer/StartButton" to="MarginContainer" method="_on_Start_pressed"]
 
