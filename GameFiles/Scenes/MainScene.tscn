@@ -14,7 +14,7 @@
 [ext_resource path="res://Scenes/Spike.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Food.tscn" type="PackedScene" id=13]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -192,7 +192,8 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Light2D" type="Light2D" parent="Foreground_Canvas" index="1"]
 
-position = Vector2( 630, 350 )
+position = Vector2( 630, 337.875 )
+scale = Vector2( 0.762351, 0.661368 )
 enabled = true
 editor_only = false
 texture = ExtResource( 6 )

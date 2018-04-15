@@ -143,6 +143,8 @@ func _physics_process(delta):
 		get_node("/root/Node2D/ParallaxBackground/Timer").text = "Timer " + str(int(timer))
 		if timer < 0:
 			emit_signal("hit")
+			
+	get_node("Camera2D").align()
 
 func playAnim(var animName):
 	
