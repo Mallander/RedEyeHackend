@@ -49,6 +49,10 @@ func _game_over():
 func _physics_process(delta):
 	var force = Vector2(0, GRAVITY)
 	
+	var start_walk_left = Input.is_action_just_pressed("left")
+	var end_walk_left = Input.is_action_just_released("left")
+	var start_walk_right = Input.is_action_just_pressed("right")
+	var end_walk_right = Input.is_action_just_released("right")
 	var walk_left = Input.is_action_pressed("left")
 	var walk_right = Input.is_action_pressed("right")
 	var jump_start = Input.is_action_pressed("up")
@@ -74,6 +78,12 @@ func _physics_process(delta):
 				if is_on_floor() and not jumping:
 					animToPlay = "Walk"
 				stop = false
+		
+		if start_walk_left or start_walk_right and is_on_floor():
+			get_node("Running_Audio").play()
+		
+		if end_walk_left or end_walk_right:
+			get_node("Running_Audio").stop()
 		
 		if stop:
 			var vsign = sign(velocity.x)
@@ -138,7 +148,11 @@ func _on_TheWolf_hit():
 	_game_over()
 
 func _Area2D_Collision(body):
+	print(body)
 	emit_signal("hit")
-	
+
 func get_center_pos():
 	return get_global_position() + get_node("CollisionSquare").get_global_position()
+
+func Level_End_entered(var nextScene):
+	get_tree().change_scene(nextScene)

@@ -11,16 +11,12 @@
 [ext_resource path="res://assets/ground_3.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/TheWolf.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/light.png" type="Texture" id=11]
-[ext_resource path="res://icon.png" type="Texture" id=12]
-[ext_resource path="res://audio/death.wav" type="AudioStream" id=13]
-[ext_resource path="res://audio/Background_Music.wav" type="AudioStream" id=14]
+[ext_resource path="res://audio/death.wav" type="AudioStream" id=12]
+[ext_resource path="res://audio/Background_Music.wav" type="AudioStream" id=13]
+[ext_resource path="res://Scenes/Level_End.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=15]
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -57,6 +53,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -243,25 +240,15 @@ size_flags_vertical = 1
 texture = ExtResource( 9 )
 stretch_mode = 2
 
-[node name="Area2D" type="Area2D" parent="." index="3"]
+[node name="TheWolf" parent="." index="3" instance=ExtResource( 10 )]
 
-position = Vector2( 1054.43, -354.268 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
+editor/display_folded = true
+position = Vector2( 141.223, 907.412 )
 
-[node name="TheWolf" parent="Area2D" index="0" instance=ExtResource( 10 )]
-
-position = Vector2( -913.207, 1261.68 )
-
-[node name="Light2D" type="Light2D" parent="Area2D/TheWolf" index="4"]
+[node name="Light2D" type="Light2D" parent="TheWolf" index="6"]
 
 visible = false
-position = Vector2( -3.46082, 17.9167 )
+position = Vector2( -3.46082, 17.9166 )
 enabled = true
 editor_only = false
 texture = ExtResource( 11 )
@@ -285,52 +272,9 @@ shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Shadow" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="1"]
-
-position = Vector2( -599.672, 1367.89 )
-scale = Vector2( 2.34848, 2.39005 )
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="Area2D/CollisionShape2D" index="0"]
-
-position = Vector2( 0.190063, 0.423943 )
-scale = Vector2( 0.424495, 0.420717 )
-texture = ExtResource( 12 )
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" index="2"]
-
-position = Vector2( -319.604, 1300.89 )
-scale = Vector2( 2.34848, 2.39005 )
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="Area2D/CollisionShape2D3" index="0"]
-
-position = Vector2( -1.74484, -0.526703 )
-scale = Vector2( 0.424495, 0.420717 )
-texture = ExtResource( 12 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" index="3"]
-
-position = Vector2( 919.277, 950.638 )
-scale = Vector2( 2.34848, 2.39005 )
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="Area2D/CollisionShape2D2" index="0"]
-
-position = Vector2( 3.12708, 0.921066 )
-scale = Vector2( 0.424495, 0.420717 )
-texture = ExtResource( 12 )
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" index="4"]
-
-position = Vector2( 1417.57, 1474.27 )
-scale = Vector2( 192.154, 2 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
 [node name="Death" type="AudioStreamPlayer" parent="." index="4"]
 
-stream = ExtResource( 13 )
+stream = ExtResource( 12 )
 volume_db = -20.0
 autoplay = false
 mix_target = 0
@@ -338,14 +282,15 @@ bus = "Master"
 
 [node name="Background_Music" type="AudioStreamPlayer" parent="." index="5"]
 
-stream = ExtResource( 14 )
-volume_db = -30.0
+stream = ExtResource( 13 )
+volume_db = -20.0
 autoplay = true
 mix_target = 0
 bus = "Master"
 
 [node name="Foreground_Canvas" type="CanvasLayer" parent="." index="6"]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -395,10 +340,37 @@ shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Range" ]
 
-[connection signal="body_entered" from="Area2D" to="Area2D/TheWolf" method="_on_Area2D_body_entered"]
+[node name="Level_End" parent="." index="7" instance=ExtResource( 14 )]
 
-[connection signal="body_entered" from="Area2D" to="Area2D/TheWolf" method="_Area2D_Collision"]
+position = Vector2( 3080, 840 )
+NextScene = "res://Scenes/MainScene.tscn"
 
-[connection signal="hit" from="Area2D/TheWolf" to="Area2D/TheWolf" method="_on_TheWolf_hit"]
+[node name="Enemy" parent="." index="8" instance=ExtResource( 15 )]
+
+position = Vector2( 420, 980 )
+
+[node name="Enemy2" parent="." index="9" instance=ExtResource( 15 )]
+
+position = Vector2( 700, 700 )
+
+[node name="Enemy3" parent="." index="10" instance=ExtResource( 15 )]
+
+position = Vector2( 1190, 910 )
+
+[node name="Enemy4" parent="." index="11" instance=ExtResource( 15 )]
+
+position = Vector2( 1400, 770 )
+
+[node name="Enemy5" parent="." index="12" instance=ExtResource( 15 )]
+
+position = Vector2( 1820, 910 )
+
+[node name="Enemy6" parent="." index="13" instance=ExtResource( 15 )]
+
+position = Vector2( 1610, 840 )
+
+[connection signal="hit" from="TheWolf" to="TheWolf" method="_on_TheWolf_hit"]
+
+[connection signal="hit" from="TheWolf" to="TheWolf" method="_on_Level_End_hit"]
 
 
