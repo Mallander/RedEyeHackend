@@ -1,24 +1,18 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Bottom_Boundary.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/platform_tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/Scripts/level_bounds.gd" type="Script" id=3]
-[ext_resource path="res://assets/sky.png" type="Texture" id=4]
-[ext_resource path="res://assets/clouds_1.png" type="Texture" id=5]
-[ext_resource path="res://assets/rocks.png" type="Texture" id=6]
-[ext_resource path="res://assets/ground_1.png" type="Texture" id=7]
-[ext_resource path="res://assets/clouds_2.png" type="Texture" id=8]
-[ext_resource path="res://assets/ground_2.png" type="Texture" id=9]
-[ext_resource path="res://assets/ground_3.png" type="Texture" id=10]
-[ext_resource path="res://Scenes/Torch.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/light.png" type="Texture" id=12]
-[ext_resource path="res://Scenes/TheWolf.tscn" type="PackedScene" id=13]
-[ext_resource path="res://audio/death.wav" type="AudioStream" id=14]
-[ext_resource path="res://audio/Background_Music.wav" type="AudioStream" id=15]
-[ext_resource path="res://Scenes/Level_End.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/Spike.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scenes/Chainsaw.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Scenes/Chainsaw_Moving.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Torch.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/light.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/TheWolf.tscn" type="PackedScene" id=6]
+[ext_resource path="res://audio/death.wav" type="AudioStream" id=7]
+[ext_resource path="res://audio/Background_Music.wav" type="AudioStream" id=8]
+[ext_resource path="res://Scenes/Level_End.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Spike.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Chainsaw.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Chainsaw_Moving.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/ParallaxBackground.tscn" type="PackedScene" id=13]
 
 [node name="Node2D" type="Node2D"]
 
@@ -60,218 +54,7 @@ scale = Vector2( 70, 16.4063 )
 script = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="3"]
-
-editor/display_folded = true
-layer = -1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-scroll_offset = Vector2( 0, 0 )
-scroll_base_offset = Vector2( 0, 0 )
-scroll_base_scale = Vector2( 1, 1 )
-scroll_limit_begin = Vector2( 0, 0 )
-scroll_limit_end = Vector2( 0, 0 )
-scroll_ignore_camera_zoom = false
-_sections_unfolded = [ "Scroll" ]
-
-[node name="TextureRect" type="TextureRect" parent="ParallaxBackground" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 4 )
-stretch_mode = 6
-
-[node name="Parallax Clouds" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
-
-position = Vector2( -1024, -576 )
-z_index = 1
-motion_scale = Vector2( 0.2, 0.2 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 1920, 0 )
-_sections_unfolded = [ "Motion", "Transform", "Z Index" ]
-
-[node name="Clouds1" type="TextureRect" parent="ParallaxBackground/Parallax Clouds" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 5 )
-stretch_mode = 2
-
-[node name="Parallax Rocks" type="ParallaxLayer" parent="ParallaxBackground" index="2"]
-
-position = Vector2( -896, -504 )
-z_index = 1
-motion_scale = Vector2( 0.3, 0.3 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 1920, 0 )
-_sections_unfolded = [ "Motion", "Transform" ]
-
-[node name="Rocks" type="TextureRect" parent="ParallaxBackground/Parallax Rocks" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 6 )
-stretch_mode = 2
-
-[node name="Parallax Ground 1" type="ParallaxLayer" parent="ParallaxBackground" index="3"]
-
-position = Vector2( -640, -360 )
-z_index = 1
-motion_scale = Vector2( 0.5, 0.5 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 1920, 0 )
-_sections_unfolded = [ "Motion", "Transform" ]
-
-[node name="Ground1" type="TextureRect" parent="ParallaxBackground/Parallax Ground 1" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 7 )
-stretch_mode = 2
-
-[node name="Parallax Clouds 2" type="ParallaxLayer" parent="ParallaxBackground" index="4"]
-
-position = Vector2( -512, -288 )
-z_index = 1
-motion_scale = Vector2( 0.6, 0.6 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 1920, 0 )
-_sections_unfolded = [ "Motion", "Transform" ]
-
-[node name="Clouds2" type="TextureRect" parent="ParallaxBackground/Parallax Clouds 2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 8 )
-stretch_mode = 2
-
-[node name="Parallax Ground 2" type="ParallaxLayer" parent="ParallaxBackground" index="5"]
-
-position = Vector2( -384, -216 )
-z_index = 1
-motion_scale = Vector2( 0.7, 0.7 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 1920, 0 )
-_sections_unfolded = [ "Motion", "Transform" ]
-
-[node name="Ground2" type="TextureRect" parent="ParallaxBackground/Parallax Ground 2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 9 )
-stretch_mode = 2
-
-[node name="Parallax Ground 3" type="ParallaxLayer" parent="ParallaxBackground" index="6"]
-
-position = Vector2( -128, -72 )
-z_index = 1
-motion_scale = Vector2( 0.9, 0.9 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 1920, 0 )
-_sections_unfolded = [ "Motion", "Transform" ]
-
-[node name="Ground3" type="TextureRect" parent="ParallaxBackground/Parallax Ground 3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 10 )
-stretch_mode = 2
-
-[node name="Timer" type="Label" parent="ParallaxBackground" index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 78.0
-margin_top = 45.0
-margin_right = 236.0
-margin_bottom = 91.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Timer"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
-
-[node name="Light2" parent="." index="4" instance=ExtResource( 11 )]
+[node name="Light2" parent="." index="3" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 840, 210 )
@@ -281,7 +64,7 @@ position = Vector2( 840, 210 )
 position = Vector2( 35, 35 )
 enabled = true
 editor_only = false
-texture = ExtResource( 12 )
+texture = ExtResource( 5 )
 offset = Vector2( 0, 0 )
 texture_scale = 0.7
 color = Color( 0.964844, 0.938314, 0.765091, 1 )
@@ -302,7 +85,7 @@ shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Light" parent="." index="5" instance=ExtResource( 11 )]
+[node name="Light" parent="." index="4" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 175, 630 )
@@ -312,7 +95,7 @@ position = Vector2( 175, 630 )
 position = Vector2( 35, 35 )
 enabled = true
 editor_only = false
-texture = ExtResource( 12 )
+texture = ExtResource( 5 )
 offset = Vector2( 0, 0 )
 texture_scale = 0.7
 color = Color( 0.964844, 0.938314, 0.765091, 1 )
@@ -333,7 +116,7 @@ shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Z Index" ]
 
-[node name="TheWolf" parent="." index="6" instance=ExtResource( 13 )]
+[node name="TheWolf" parent="." index="5" instance=ExtResource( 6 )]
 
 editor/display_folded = true
 position = Vector2( 70, 35 )
@@ -344,7 +127,7 @@ _sections_unfolded = [ "Z Index" ]
 position = Vector2( -3.46082, 17.9166 )
 enabled = true
 editor_only = false
-texture = ExtResource( 12 )
+texture = ExtResource( 5 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 0.502853, 0.537234, 0.761719, 1 )
@@ -364,23 +147,23 @@ shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 
-[node name="Death" type="AudioStreamPlayer" parent="." index="7"]
+[node name="Death" type="AudioStreamPlayer" parent="." index="6"]
 
-stream = ExtResource( 14 )
+stream = ExtResource( 7 )
 volume_db = -20.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Background_Music" type="AudioStreamPlayer" parent="." index="8"]
+[node name="Background_Music" type="AudioStreamPlayer" parent="." index="7"]
 
-stream = ExtResource( 15 )
+stream = ExtResource( 8 )
 volume_db = -20.0
 autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="Foreground_Canvas" type="CanvasLayer" parent="." index="9"]
+[node name="Foreground_Canvas" type="CanvasLayer" parent="." index="8"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -405,10 +188,10 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Light2D" type="Light2D" parent="Foreground_Canvas" index="1"]
 
-position = Vector2( 945, 735 )
+position = Vector2( 630, 350 )
 enabled = true
 editor_only = false
-texture = ExtResource( 12 )
+texture = ExtResource( 5 )
 offset = Vector2( 0, 0 )
 texture_scale = 4.27
 color = Color( 0.015625, 0.015625, 0.015625, 1 )
@@ -429,7 +212,7 @@ shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Range" ]
 
-[node name="Level_End" parent="." index="10" instance=ExtResource( 16 )]
+[node name="Level_End" parent="." index="9" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 1295, 560 )
@@ -440,7 +223,7 @@ NextScene = "res://Scenes/MainScene.tscn"
 position = Vector2( 35, 105 )
 enabled = true
 editor_only = false
-texture = ExtResource( 12 )
+texture = ExtResource( 5 )
 offset = Vector2( 0, 0 )
 texture_scale = 0.8
 color = Color( 0.502853, 0.537234, 0.761719, 1 )
@@ -460,45 +243,47 @@ shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 
-[node name="Spike" parent="." index="11" instance=ExtResource( 17 )]
+[node name="Spike" parent="." index="10" instance=ExtResource( 10 )]
 
 position = Vector2( 350, 700 )
 
-[node name="Spike3" parent="." index="12" instance=ExtResource( 17 )]
+[node name="Spike3" parent="." index="11" instance=ExtResource( 10 )]
 
 position = Vector2( 770, 140 )
 
-[node name="Spike4" parent="." index="13" instance=ExtResource( 17 )]
+[node name="Spike4" parent="." index="12" instance=ExtResource( 10 )]
 
 position = Vector2( 0, 560 )
 
-[node name="Spike5" parent="." index="14" instance=ExtResource( 17 )]
+[node name="Spike5" parent="." index="13" instance=ExtResource( 10 )]
 
 position = Vector2( 280, 210 )
 
-[node name="Spike6" parent="." index="15" instance=ExtResource( 17 )]
+[node name="Spike6" parent="." index="14" instance=ExtResource( 10 )]
 
 position = Vector2( 1540, 630 )
 
-[node name="Spike7" parent="." index="16" instance=ExtResource( 17 )]
+[node name="Spike7" parent="." index="15" instance=ExtResource( 10 )]
 
 position = Vector2( 1330, 910 )
 
-[node name="Spike8" parent="." index="17" instance=ExtResource( 17 )]
+[node name="Spike8" parent="." index="16" instance=ExtResource( 10 )]
 
 position = Vector2( 2555, 700 )
 
-[node name="Chainsaw" parent="." index="18" instance=ExtResource( 18 )]
+[node name="Chainsaw" parent="." index="17" instance=ExtResource( 11 )]
 
 position = Vector2( 1575, 350 )
 
-[node name="Chainsaw_Moving" parent="." index="19" instance=ExtResource( 19 )]
+[node name="Chainsaw_Moving" parent="." index="18" instance=ExtResource( 12 )]
 
 position = Vector2( 2800, 910 )
 
-[node name="Chainsaw_Moving2" parent="." index="20" instance=ExtResource( 19 )]
+[node name="Chainsaw_Moving2" parent="." index="19" instance=ExtResource( 12 )]
 
 position = Vector2( 630, 490 )
+
+[node name="ParallaxBackground" parent="." index="20" instance=ExtResource( 13 )]
 
 [connection signal="hit" from="TheWolf" to="TheWolf" method="_on_TheWolf_hit"]
 
