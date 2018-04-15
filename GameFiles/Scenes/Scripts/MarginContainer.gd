@@ -17,5 +17,5 @@ func _ready():
 
 
 func _on_Start_pressed():
-	get_tree().change_scene("res://MainScene.tscn")
+	get_tree().change_scene("res://Scenes/MainScene.tscn")
 	pass # replace with function body

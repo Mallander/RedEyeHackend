@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/Home Screen.jpg" type="Texture" id=1]
-[ext_resource path="res://MarginContainer.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Scripts/MarginContainer.gd" type="Script" id=2]
 [ext_resource path="res://assets/Start.png" type="Texture" id=3]
 
-[node name="MarginContainer" type="MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0

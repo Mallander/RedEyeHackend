@@ -1,10 +1,16 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Character/TheWold.gd" type="Script" id=1]
-[ext_resource path="res://sprite/PC Computer - Khendovir Chronicles Rinets Quest - Dire Wolf.png" type="Texture" id=2]
-[ext_resource path="res://Character/TheWolfAnimation.tres" type="Animation" id=3]
+[ext_resource path="res://Scenes/Scripts/TheWolf.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprite/PC Computer - Khendovir Chronicles Rinets Quest - Dire Wolf.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/TheWolfAnimation.tres" type="Animation" id=3]
 [ext_resource path="res://assets/Camera2D.gd" type="Script" id=4]
 [ext_resource path="res://audio/jump.wav" type="AudioStream" id=5]
+
+
+
+
+
+
 
 [sub_resource type="Animation" id=6]
 

@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/log.jpeg-2a7cea6ebfe880f5f266a195730e908a.stex"
+path="res://.import/log.jpeg-345fd6c53a2aa22f82c60c0d50a0ccde.stex"
 
 [deps]
 
-source_file="res://sprite/log.jpeg"
+source_file="res://assets/sprite/log.jpeg"
 source_md5="a26c89bf614e1c9f5055dbf0ab8721cf"
 
-dest_files=[ "res://.import/log.jpeg-2a7cea6ebfe880f5f266a195730e908a.stex" ]
+dest_files=[ "res://.import/log.jpeg-345fd6c53a2aa22f82c60c0d50a0ccde.stex" ]
 dest_md5="c82c236436307b7a2cbc2ff51752f21f"
 
 [params]

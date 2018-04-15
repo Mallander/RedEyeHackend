@@ -40,7 +40,7 @@ func _game_over():
 	playAnim("Death")
 	get_node("/root/Node2D/Death").play()
 	
-	var deathScreenScene = load("res://GameOverScreen.tscn")
+	var deathScreenScene = load("res://Scenes/GameOverScreen.tscn")
 	var deathScreen = deathScreenScene.instance()
 	get_node("/root/Node2D/Foreground_Canvas").call_deferred("add_child", deathScreen)
 	

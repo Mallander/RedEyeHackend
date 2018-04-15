@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PC Computer - Khendovir Chronicles Rinets Quest - Dire Wolf.png-480b8d9c1df9da076c180fcd6c203942.stex"
+path="res://.import/PC Computer - Khendovir Chronicles Rinets Quest - Dire Wolf.png-89b74baf2378ba58f2e7ef9ad008373d.stex"
 
 [deps]
 
-source_file="res://sprite/PC Computer - Khendovir Chronicles Rinets Quest - Dire Wolf.png"
+source_file="res://assets/sprite/PC Computer - Khendovir Chronicles Rinets Quest - Dire Wolf.png"
 source_md5="0a0df81c85bb772c7572ad78a7deeeb6"
 
-dest_files=[ "res://.import/PC Computer - Khendovir Chronicles Rinets Quest - Dire Wolf.png-480b8d9c1df9da076c180fcd6c203942.stex" ]
+dest_files=[ "res://.import/PC Computer - Khendovir Chronicles Rinets Quest - Dire Wolf.png-89b74baf2378ba58f2e7ef9ad008373d.stex" ]
 dest_md5="8e5c0d2643e2211ba451531e4bbd5111"
 
 [params]
