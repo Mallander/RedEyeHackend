@@ -9,9 +9,9 @@ const WALK_FORCE = 2000
 const WALK_MIN_SPEED = 10
 const WALK_MAX_SPEED = 500
 const STOP_FORCE = 2000
-const JUMP_SPEED_MIN = 450
+const JUMP_SPEED_MIN = 500
 const JUMP_SPEED_MAX = 1050
-const JUMP_SPEED_INCREASE = 40
+const JUMP_SPEED_INCREASE = 70
 const JUMP_SPEED = 650
 const JUMP_MAX_AIRBORNE_TIME = 0.2
 
@@ -105,13 +105,14 @@ func _physics_process(delta):
 		if jump_start:
 			jump_final_speed += JUMP_SPEED_INCREASE
 			
-		if (jump_final_speed == JUMP_SPEED_MAX or jump_end) and on_air_time < JUMP_MAX_AIRBORNE_TIME and not prev_jump_pressed and not jumping:
+		if (jump_final_speed >= JUMP_SPEED_MAX or jump_end) and on_air_time < JUMP_MAX_AIRBORNE_TIME and not prev_jump_pressed and not jumping:
 			
 			velocity.y = -clamp(jump_final_speed, JUMP_SPEED_MIN, JUMP_SPEED_MAX)
+			jump_final_speed = JUMP_SPEED_MIN
+			jumping = true
+			
 			animToPlay = "Jump_Start"
 			get_node("Jump_Audio").play()
-			jumping = true
-			jump_final_speed = JUMP_SPEED_MIN
 		
 		on_air_time += delta
 		prev_jump_pressed = jump_end
