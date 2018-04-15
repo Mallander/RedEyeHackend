@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Level_End.gd" type="Script" id=1]
-[ext_resource path="res://assets/Log.png" type="Texture" id=2]
+[ext_resource path="res://assets/Red_House.png" type="Texture" id=2]
 
 [node name="Level_End" type="StaticBody2D"]
 
@@ -17,8 +17,8 @@ NextScene = null
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( 69, 70.4724 )
-scale = Vector2( 0.0578647, 0.0551806 )
+position = Vector2( 70, 70 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
