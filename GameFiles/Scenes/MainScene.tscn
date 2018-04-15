@@ -192,8 +192,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Light2D" type="Light2D" parent="Foreground_Canvas" index="1"]
 
-position = Vector2( 630, 337.875 )
-scale = Vector2( 0.762351, 0.661368 )
+position = Vector2( 630, 350 )
 enabled = true
 editor_only = false
 texture = ExtResource( 6 )
@@ -266,11 +265,17 @@ position = Vector2( 1015, 910 )
 
 [node name="Food1" parent="." index="15" instance=ExtResource( 13 )]
 
-position = Vector2( 483.804, 506.486 )
+position = Vector2( 501.489, 563.622 )
 
 [node name="Food2" parent="." index="16" instance=ExtResource( 13 )]
 
-position = Vector2( 1312.84, 382.708 )
+position = Vector2( 1350.93, 449.366 )
+
+[node name="Food" parent="." index="17" instance=ExtResource( 13 )]
+
+position = Vector2( 1952.43, 416.803 )
+
+[connection signal="draw" from="TheWolf" to="TheWolf" method="_on_TheWolf_draw"]
 
 [connection signal="hit" from="TheWolf" to="TheWolf" method="_on_TheWolf_hit"]
 
