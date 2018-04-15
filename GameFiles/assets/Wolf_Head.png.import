@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/log-clipart-brown-log-with-green-leaf.svg-c791ee4740a3f890960e1c81ee2e2eab.stex"
+path="res://.import/Wolf_Head.png-4473a7e7c2389bffc14fc8d935ffb370.stex"
 
 [deps]
 
-source_file="res://assets/log-clipart-brown-log-with-green-leaf.svg"
-source_md5="f6e5707007b63b76da8727a93ef38a73"
+source_file="res://assets/Wolf_Head.png"
+source_md5="60c79da5547638177c6c437ba9c4a9ed"
 
-dest_files=[ "res://.import/log-clipart-brown-log-with-green-leaf.svg-c791ee4740a3f890960e1c81ee2e2eab.stex" ]
-dest_md5="0a3e8c986a95bb3f5f6c2aa0c1797870"
+dest_files=[ "res://.import/Wolf_Head.png-4473a7e7c2389bffc14fc8d935ffb370.stex" ]
+dest_md5="4183fa2ea300996139d452288bbcfa79"
 
 [params]
 
