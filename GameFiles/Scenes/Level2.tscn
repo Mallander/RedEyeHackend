@@ -216,7 +216,6 @@ _sections_unfolded = [ "Range" ]
 
 editor/display_folded = true
 position = Vector2( 1295, 560 )
-NextScene = "res://Scenes/MainScene.tscn"
 
 [node name="Level_End_Light" type="Light2D" parent="Level_End" index="2"]
 

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Howl.wav-2d2b757dff5376a1d95c2e60913a9a68.sample"
+
+[deps]
+
+source_file="res://audio/Howl.wav"
+source_md5="a0c692eb8d36c38fe1d1c6211b839207"
+
+dest_files=[ "res://.import/Howl.wav-2d2b757dff5376a1d95c2e60913a9a68.sample" ]
+dest_md5="98ce4a0236caca3c33d0e57f2dd95576"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
